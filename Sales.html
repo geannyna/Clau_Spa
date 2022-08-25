@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relax Space</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anek+Latin:wght@300&family=BhuTuka+Expanded+One&family=Electrolize&family=League+Gothic&family=Modak&family=Montserrat+Alternates:ital,wght@0,600;1,400&family=Poppins:ital,wght@0,400;1,200&family=Stoke:wght@300&family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+     <!-- icono de la pestaña de la pagina-->
+   <link rel="shortcut icon" href="./img/lotus_1.png">
+   <link rel="stylesheet" href="style.css">
+   <style>
+
+    .card_aceites{
+      background-color: transparent;
+      border: 0px;
+    }
+    .a_titulo, .a_subtitulo{
+      color: #083189;
+      font-size: 1.5em;
+      font-weight: bold;
+      border: 0px;
+    }
+    
+    .body_a{
+          background-color: white;
+    }
+    .aceite_cat{
+      background-image: linear-gradient(rgb(252, 251, 251),#1a61fa 50%,rgb(255, 255, 255));
+      
+    }
+
+    #aceites_wrapper{
+      background-image: repeating-linear-gradient(0deg, white, blue 40%, white);
+    }
+    .icono_footer{
+      display: flex;
+      justify-content: space-around;
+      height: 30px;
+    }
+    .footer_a{
+      height: 100px;
+      background: linear-gradient(white,#1a61fa);
+    }
+
+   </style>
+  </head>
+
+  <body class="body_a">
+
+     <!-- pagina desplegable derecha cuando hace click en login -->
+     <div id="loginSide">
+      <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-12 col-md-9">
+            <div id="exitLogin" class="h2">
+               <!-- icono x de cierre de pagina -->
+              <img src="./img/closeIcon.png" alt="">
+            </div>
+            <form method="POST" id="form">
+              <div class="mb-3">
+                <label for="uname" class="form-label letra_pers">User name</label>
+                <input type="text" class="form-control" id="uname">
+              </div>
+              <div class="mb-5">
+                <label for="pass" class="form-label letra_pers">Password</label>
+                <input type="password" class="form-control" id="pass">
+              </div>
+              <div class="d-flex justify-content-center mt-2">
+                <button id="enviar" type="submit" class="btn btn-outline-light letra_pers">Log in</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- pagina desplegable derecha cuando hace click en register -->
+ <div id="regSide">
+  <div class="container-fluid h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-12 col-md-9">
+        <div id="exitReg" class="h2">
+           <!-- icono x de cierre de pagina -->
+          <img src="./img/closeIcon.png" alt="">
+        </div>
+        <form>
+          <div class="input-group mb-3 py-4">
+            <span class="input-group-text letra_pers" id="inputGroup-sizing-default">First name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="input-group mb-3 py-4">
+            <span class="input-group-text letra_pers" id="inputGroup-sizing-default">Last name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label letra_pers">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-5">
+            <label for="exampleInputPassword1" class="form-label letra_pers">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="d-flex justify-content-center mt-2">
+            <button type="submit" class="btn btn-outline-dark letra_pers">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <header>
+      <nav class="navbar bg-transparent p-3">
+        <div class="container-fluid letra_pers">
+         
+          <a id="logo" href="./index.html" class="navbar-brand mb-0 fs-2 h2"><img id="logo2" src="./img/lotus_lleno.png"> Relax and enjoy</a>
+          <div class="loginRegis">
+            <a href="" id="toggleLogin" class="text-decoration-none text-reset fs-4 mx-3"> LOGIN</a>
+            <a href="" id="toggleReg" class="text-decoration-none text-reset fs-4"> REGISTER</a>
+          </div>
+       </div>
+      </nav>
+      
+      
+      <div class="menu_items">
+        <ul class="list-unstyled fs-5">
+          <li>About</li>
+          <li>Info</li>
+          <li>Sales</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      </header>
+
+      <div class="relleno">
+
+      </div>
+  
+      <main>
+        <div class="container bg_main ">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="titulo display-3">Sales</h1>
+              <h2 class="subtitulo">Sales de baño</h2>
+            </div>
+          </div>
+        </div>
+  
+      </main>
+
+       <!-- categorias aqui -->
+      <section>
+        <div class="container-fluid my-5 py-5 aceite_cat">
+          <div class="row justify-content-end">
+            <div class="col-12 col-md-10">
+              <div class="row" id="cat_wrapper">
+               <!-- <div class="col-12 col-md-4 d-flex justify-content-center">
+                  <div class="card card_cat_aceite">
+                      <h5 class="card-title m-0 p-0">Card title</h5>
+                  </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- detalles de los productos y tipos -->
+      <section>
+        <div class="container-fluid my-5 py-5">
+          <div class="row" id="aceites_wrapper">
+            <!-- <div class="col-12 col-md-3 d-flex justify-content-center">
+              <div class="card card_aceites" style="width: 18rem;">
+                <img src="./img/sales.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card card_titulo">name</h6>
+                  <h4 class="card card_subtitulo">price</h4>
+                  <a href="#" class="btn btn-primary">Compra ahora</a>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer_a"> 
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+              <div class="col-12 col-md-3 icono_footer">
+                <img src="./img/facebook.svg">
+                <img src="./img/discord.svg">
+                <img src="./img/github.svg">
+                <img src="./img/twitter.svg">
+                <img src="./img/whatsapp.svg">
+              </div>
+            </div>
+        </div>
+      </footer>
+  
+        <!-- CDN Gsap -> librería animation JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    
+    <script>
+      fetch('Productos_Json.json')
+      .then(response => response.json())
+      .then(data =>{
+        let aceites = data.filter(el => el.category == "Sales");
+        let aceites_wrapper = document.querySelector("#aceites_wrapper");
+
+        aceites.forEach(el =>{
+          let col = document.createElement('div');
+          col.classList.add("col-12", "col-md-3", "d-flex", "justify-content-center");
+
+          col.innerHTML = ` 
+          
+          <div class="card my-3 border-0 card_aceites" style="width: 18rem;">
+            <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5" alt="...">
+            <div class="card-body">
+              <h6 class="card a_titulo">${el.name}</h6>
+              <h4 class="card a_subtitulo">${el.price} €</h4>
+              <a href="#" class="btn btn-primary">Comprar ahora</a>
+            </div>
+          </div>
+          `
+          aceites_wrapper.appendChild(col);
+        });
+      });
+
+    </script>
+  </body>
+</html>

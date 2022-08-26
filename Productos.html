@@ -237,59 +237,62 @@
       </section>
   
       <!-- detalles de los productos y tipos -->
-   <!-- Swiper -->
+      <!----------- Swiper ----------------->
 
    <section class="cubo"> 
     <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="col-12 d-flex justify-content-center">
+    <div class="swiper-wrapper" id="cubo_pro">
+     <div class="swiper-slide">
+          <div class="col-12 d-flex justify-content-center" >
+            <div class="card cards_cubo rounded-5 border-0" style="width: 10rem;">
+              <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5 py-2" alt="...">
+                <h5 class="card p_titulo py-1">name</h5>
+                <h4 class="card p_subtitulo py-1">price</h4>
+                <h6 class="card p_titulo py-1">e-mail</h6>
+                <a href="#" class="btn p_btn">Compra ahora</a>  
+            </div>
+         </div>
+       </div> 
+
+       <div class="swiper-slide">
+        <div class="col-12 d-flex justify-content-center" >
           <div class="card cards_cubo rounded-5 border-0" style="width: 10rem;">
             <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5 py-2" alt="...">
-              <h5 class="card p_titulo py-1">name</h5>
+              <h5 class="card p_titulo py-1">name2</h5>
               <h4 class="card p_subtitulo py-1">price</h4>
               <h6 class="card p_titulo py-1">e-mail</h6>
-              <a href="#" class="btn p_btn">Compra ahora</a>
-            
+              <a href="#" class="btn p_btn">Compra ahora</a>  
           </div>
+       </div>
+     </div>    
+       <div class="swiper-slide">
+      <div class="col-12 d-flex justify-content-center" >
+        <div class="card cards_cubo rounded-5 border-0" style="width: 10rem;">
+          <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5 py-2" alt="...">
+            <h5 class="card p_titulo py-1">name3</h5>
+            <h4 class="card p_subtitulo py-1">price</h4>
+            <h6 class="card p_titulo py-1">e-mail</h6>
+            <a href="#" class="btn p_btn">Compra ahora</a>  
         </div>
+     </div>
+   </div>     
+    <div class="swiper-slide">
+    <div class="col-12 d-flex justify-content-center" >
+      <div class="card cards_cubo rounded-5 border-0" style="width: 10rem;">
+        <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5 py-2" alt="...">
+          <h5 class="card p_titulo py-1">name4</h5>
+          <h4 class="card p_subtitulo py-1">price</h4>
+          <h6 class="card p_titulo py-1">e-mail</h6>
+          <a href="#" class="btn p_btn">Compra ahora</a>  
       </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+   </div>
+ </div> 
       </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-      </div>
-    </div>
     <div class="swiper-pagination"></div>
   </div>
 </section>
   
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "cube",
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
-
-      <footer class="footer_a"> 
+<footer class="footer_a"> 
         <div class="container-fluid">
             <div class="row justify-content-end">
               <div class="col-12 col-md-3 icono_footer">
@@ -303,41 +306,65 @@
         </div>
       </footer>
   
-        <!-- CDN Gsap -> librería animation JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <!-- CDN Gsap -> librería animation JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script src="./main.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
-    
     <script>
+   
+
       fetch('Productos_Json.json')
       .then(response => response.json())
       .then(data =>{
-        let aceites = data.filter(el => el.category == "Aceites");
-        let aceites_wrapper = document.querySelector("#aceites_wrapper");
+   
+    //----------- Swiper JS -------------
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
 
-        aceites.forEach(el =>{
-          let col = document.createElement('div');
-          col.classList.add("col-12", "col-md-3", "d-flex", "justify-content-center");
-
-          col.innerHTML = ` 
+       
+        let prodOrden = data.sort((a,b) => a.price - b.price); 
+        let productos = document.querySelector("#cubo_pro");
+// rellenar todas las caras del cubo con los productos
+        //console.log(prodOrden);
+        prodOrden.forEach(element =>{
           
-          <div class="card my-3 border-0 card_aceites" style="width: 18rem;">
-            <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5" alt="...">
-            <div class="card-body">
-              <h6 class="card a_titulo">${el.name}</h6>
-              <h4 class="card a_subtitulo">${el.price} €</h4>
-              <a href="#" class="btn btn-primary">Comprar ahora</a>
-            </div>
-          </div>
-          `
-          aceites_wrapper.appendChild(col);
-        });
+          let div = document.createElement("div");
+          div.classList.add("swiper-slide");
+
+          div.innerHTML = ` 
+         
+            <div class="col-12 d-flex justify-content-center" >
+              <div class="card cards_cubo rounded-5 border-0" style="width: 10rem;">
+                <img src="./img/aceite-mosqueta.jpg" class="card-img-top rounded-5 py-2" alt="...">
+                <h5 class="card p_titulo py-1">${element.name}</h5>
+                <h4 class="card p_subtitulo py-1">${element.price} €</h4>
+                <h6 class="card p_titulo py-1">${element.category}</h6>
+                <h6 class="card p_titulo py-1">${element.email}</h6>
+                  <a href="#" class="btn p_btn">Compra ahora</a>  
+              </div>
+           </div>
+         `
+         productos.appendChild(div)
+    
+        }); 
       });
-// modificar el js para que salgan todos los productos y hacer que las cards aparezcan segun hacemos scroll 
-    </script>
+     
+
+  </script>
+
   </body>
 </html>
 

@@ -158,20 +158,20 @@ fetch('Productos_Json.json')
   let cArray = Object.entries(contador);
   let orden = cArray.sort((a,b) => b[1] - a[1])
                     .slice(0,3)
-                    .map(el => el[0])
+                    .map(el => el[0]);
 
-  let tabsM = document.querySelector("#myTab");
+
   orden.forEach((el, index) =>{
+    let tabsM = document.querySelector("#myTab");
     let li = document.createElement("li");
     li.classList.add("nav-item");
     li.innerHTML = `
     <button class="nav-link ${index == 0 ? "active" : ""} letra_pers" id="${el}-tab" data-bs-toggle="tab" data-bs-target="#${el}-tab-pane" type="button" role="tab" aria-controls="${el}-tab-pane" aria-selected="true">${el}</button>
     `
-
     tabsM.appendChild(li)
 
     // filtrar cards por categorias y ordenar de mas barato a mas carro
-    let filtrarCat = data.filter(elem => elem.category === el)
+    let filtrarCat = data.filter(elem => elem.category == el)
                          .sort((a,b) => a.price - b.price)
                          .slice(0,4)
     //console.log(filtrarCat);

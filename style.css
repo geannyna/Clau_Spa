@@ -194,7 +194,10 @@ footer{
   justify-content: space-around;
   height: 30px;
 }
-
+.iconf:hover{
+  height: 40px;
+  transition: .5s;
+}
 li{
   font-size: 1.5rem;
 }
@@ -228,11 +231,24 @@ li:hover{
   border: 0px;
   border-bottom: 10px solid #0e58f9cb;
   border-bottom-style: groove;
-  box-shadow: 2px 5px 2px #0e58f9cb;
+  box-shadow: 2px 4px 3px #0e58f9cb;
   border-radius: 40px;
+  transition: 0.5s;
 }
 .card_categ:hover{
-  background-color: #447ffd;
+  background-color: transparent;
+  width: 15rem;
+  transition: 0.5s;
+  border: 0px;
+  border-bottom: 8px solid #051e54cb;
+  border-bottom-style: groove;
+  box-shadow: 2px 5px 2px #427bf7cb;
+  border-radius: 40px;
+  
+}
+.card-title:hover{
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 .card_barratos, .cards_cubo{
   background-color: transparent;

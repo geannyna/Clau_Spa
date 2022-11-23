@@ -94,7 +94,7 @@ let segundos = document.querySelector('#segundos');
 
 setInterval(timer,1000);
 function timer(){
-let endTime = new Date(2022, 8, 10);
+let endTime = new Date(2023, 8, 02);
 let today = new Date();
 let dif = endTime - today;
 
